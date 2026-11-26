@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0B0F1A" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F5F7FB" media="(prefers-color-scheme: light)" />
+    <meta name="description" content="Inicia sesión en tu espacio de trabajo de Circles Ai. Demostración: no se envían datos a ningún servidor." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Iniciar sesión · Circles Ai</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#correo">Saltar al formulario de acceso</a>
+
+    <main class="shell">
+      <aside class="brand" aria-label="Presentación de Circles Ai">
+        <div class="brand__glow brand__glow--cyan" aria-hidden="true"></div>
+        <div class="brand__glow brand__glow--mint" aria-hidden="true"></div>
+        <div class="brand__grid" aria-hidden="true"></div>
+
+        <div class="brand__logo">
+          <svg class="mark" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+            <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.35" />
+            <circle cx="20" cy="20" r="10.5" fill="none" stroke="#00E5A0" stroke-width="1.6" opacity="0.85" />
+            <circle cx="20" cy="20" r="4.5" fill="#00D4FF" />
+          </svg>
+          <p class="wordmark">circles-ai<span>.ai</span></p>
+        </div>
+
+        <div class="brand__visual" aria-hidden="true">
+          <svg class="orbits" viewBox="0 0 420 420" role="presentation">
+            <defs>
+              <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#00E5A0" stop-opacity="0.4" />
+              </linearGradient>
+            </defs>
+            <circle class="orbit orbit--a" cx="210" cy="210" r="168" fill="none" stroke="url(#ring)" stroke-width="1.2" />
+            <circle class="orbit orbit--b" cx="210" cy="210" r="118" fill="none" stroke="#00D4FF" stroke-width="1.2" opacity="0.45" />
+            <circle class="orbit orbit--c" cx="210" cy="210" r="68" fill="none" stroke="#00E5A0" stroke-width="1.4" opacity="0.7" />
+            <circle class="pulse-core" cx="210" cy="210" r="18" fill="#00D4FF" />
+            <circle class="satellite satellite--1" cx="210" cy="42" r="6" fill="#00D4FF" />
+            <circle class="satellite satellite--2" cx="328" cy="210" r="5" fill="#00E5A0" />
+            <circle class="satellite satellite--3" cx="128" cy="310" r="4" fill="#E5E7EB" opacity="0.8" />
+          </svg>
+        </div>
+
+        <div class="brand__copy">
+          <p class="eyebrow">Factory of Factories</p>
+          <h2>Inteligencia que se siente simple.</h2>
+          <p class="lead">
+            Accede a tus agentes, proyectos y evidencia de mercado en un solo espacio de trabajo.
+          </p>
+        </div>
+      </aside>
+
+      <section class="panel">
+        <div class="panel__inner">
+          <header class="mobile-brand">
+            <svg class="mark" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
+              <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.35" />
+              <circle cx="20" cy="20" r="10.5" fill="none" stroke="#00E5A0" stroke-width="1.6" opacity="0.85" />
+              <circle cx="20" cy="20" r="4.5" fill="#00D4FF" />
+            </svg>
+            <p class="wordmark">circles-ai<span>.ai</span></p>
+          </header>
+
+          <div id="login-view">
+            <header class="intro">
+              <h1>Bienvenido de nuevo</h1>
+              <p class="lede">Ingresa a tu espacio de trabajo de Circles Ai.</p>
+            </header>
+
+            <p class="demo-note" role="note">
+              <span class="demo-note__label">Demostración</span>
+              No se envían datos a ningún servidor. Usa
+              <code>demo@circles-ai.ai</code> y <code>Demo1234</code>.
+            </p>
+
+            <div id="form-alert" class="alert" role="alert" hidden></div>
+
+            <form id="login-form" action="#" method="post" novalidate>
+              <div class="field" data-field="email">
+                <label for="correo">Correo electrónico</label>
+                <input
+                  id="correo"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="username"
+                  autocapitalize="none"
+                  autocorrect="off"
+                  spellcheck="false"
+                  required
+                  placeholder="tu@empresa.com"
+                  aria-describedby="correo-ayuda correo-error"
+                />
+                <p id="correo-ayuda" class="hint">Usa el correo con el que te registraste.</p>
+                <p id="correo-error" class="error" hidden></p>
+              </div>
+
+              <div class="field" data-field="password">
+                <label for="contrasena">Contraseña</label>
+                <div class="password-wrap">
+                  <input
+                    id="contrasena"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    minlength="8"
+                    placeholder="••••••••"
+                    aria-describedby="caps-aviso contrasena-error"
+                  />
+                  <button
+                    type="button"
+                    class="toggle-pass"
+                    id="toggle-pass"
+                    aria-controls="contrasena"
+                    aria-label="Mostrar contraseña"
+                  >
+                    <svg class="icon-eye" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z" />
+                      <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                    <svg class="icon-eye-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" hidden>
+                      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M10.6 10.6A3 3 0 0012 15a3 3 0 002.4-1.2M6.5 6.7C4.2 8.3 2.5 12 2.5 12s3.5 7 9.5 7c2.1 0 3.9-.6 5.4-1.5M17.5 15.3C19.8 13.6 21.5 12 21.5 12s-3.5-7-9.5-7c-.7 0-1.4.1-2 .2" />
+                    </svg>
+                  </button>
+                </div>
+                <p id="caps-aviso" class="caps" hidden role="status">Bloq Mayús está activado.</p>
+                <p id="contrasena-error" class="error" hidden></p>
+              </div>
+
+              <div class="row">
+                <label class="remember">
+                  <input type="checkbox" id="recordarme" name="remember" />
+                  <span>Recordarme</span>
+                </label>
+                <button type="button" class="text-link" id="forgot-btn">¿Olvidaste tu contraseña?</button>
+              </div>
+
+              <button type="submit" class="submit" id="submit-btn">
+                <span class="submit__label">Iniciar sesión</span>
+                <span class="submit__loading" hidden>
+                  <span class="spinner" aria-hidden="true"></span>
+                  Iniciando sesión…
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <div id="success-view" class="success" hidden>
+            <div class="success__mark" aria-hidden="true">
+              <svg viewBox="0 0 72 72" width="72" height="72">
+                <circle cx="36" cy="36" r="34" fill="none" stroke="currentColor" stroke-width="2" opacity="0.25" />
+                <path class="check" fill="none" stroke="#00E5A0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M22 37.5l9.5 9.5L50 26" />
+              </svg>
+            </div>
+            <h1>Sesión iniciada</h1>
+            <p class="lede">Entraste como <strong id="success-email"></strong>. Esta es una demostración: no hay una sesión real en el servidor.</p>
+            <button type="button" class="submit submit--ghost" id="logout-btn">Cerrar sesión</button>
+          </div>
+
+          <footer class="foot">
+            <p>© 2026 Circles Ai · Demostración de acceso</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="forgot-dialog" class="dialog" aria-labelledby="forgot-title">
+      <form method="dialog">
+        <h2 id="forgot-title">Recuperar contraseña</h2>
+        <p>
+          En esta demostración no hay recuperación de contraseña ni envío de correos.
+          Para probar el acceso, usa la cuenta <code>demo@circles-ai.ai</code> con la contraseña <code>Demo1234</code>.
+        </p>
+        <button type="submit" class="submit" value="close">Entendido</button>
+      </form>
+    </dialog>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
