@@ -94,6 +94,7 @@ input {
 }
 
 code {
+  white-space: nowrap;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.86em;
   background: color-mix(in srgb, var(--accent) 12%, transparent);
